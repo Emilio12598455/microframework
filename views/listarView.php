@@ -10,12 +10,13 @@
 <body>
     <table>
         <tr>
-            <th>Code
+            <th>Codigo
             </th>
-            <th>Item
+            <th>Elemento
             </th>
         </tr>
         <?php
+
         // foreach ($items as $item) {
 
             // Verificar si $items está definido y no es null
