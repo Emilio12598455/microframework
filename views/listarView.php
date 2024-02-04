@@ -16,7 +16,12 @@
             </th>
         </tr>
         <?php
-        foreach ($items as $item) {
+        // foreach ($items as $item) {
+
+            // Verificar si $items está definido y no es null
+            if (isset($items) && is_array($items)) {
+                foreach ($items as $item) {
+            
         ?>
         <tr>
             <td><?php echo $item->getCodigo() ?></td>
@@ -29,6 +34,10 @@
         </tr>
         <?php
         }
+    } else {
+        // Si $items no está definido o es null, mostrar un mensaje
+        echo "<tr><td colspan='4'>No hay elementos para mostrar</td></tr>";
+    }
         ?>
     </table>
     <a href="index.php?controlador=item&accion=nuevo">Nuevo</a>
